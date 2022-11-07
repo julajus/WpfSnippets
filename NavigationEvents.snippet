@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Navigation events</Title>
+            <Shortcut>navi</Shortcut>
+            <Description>Creates navigation events of INavigationAware interface</Description>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Code Language="XAML">
+                <![CDATA[#region Navigation Events
+                        public async void OnNavigatedTo(NavigationContext navigationContext)
+                        {
+                            $end$
+                        }
+
+                        public bool IsNavigationTarget(NavigationContext navigationContext) => true;
+
+                        public void OnNavigatedFrom(NavigationContext navigationContext)
+                        {
+                            //Not used
+                        }
+                        #endregion]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

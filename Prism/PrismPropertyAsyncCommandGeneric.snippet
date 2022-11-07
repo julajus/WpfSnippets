@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Prism Async DelegateCommand Generic</Title>
+      <Shortcut>cmdga</Shortcut>
+      <Author>Brian Lagunas</Author>
+      <Description>Creates an Async generic DelegateCommand&lt;T&gt; property with an Execute method</Description>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+    </Header>
+    <Snippet>
+      <Imports>
+        <Import>
+          <Namespace>Prism.Commands</Namespace>
+        </Import>
+        <Import>
+          <Namespace>System.Threading.Tasks</Namespace>
+        </Import>
+      </Imports>
+      <Declarations>
+        <Literal>
+          <ID>parameterType</ID>
+          <ToolTip>Type of the DelegateCommand's parameter</ToolTip>
+          <Default>string</Default>
+        </Literal>
+        <Literal>
+          <ID>CommandName</ID>
+          <ToolTip>Name of the DelegateCommand</ToolTip>
+          <Default>CommandName</Default>
+        </Literal>
+        <Literal>
+          <ID>parameterName</ID>
+          <ToolTip>The parameter name of the Execute and CanExecute methods</ToolTip>
+          <Default>parameter</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp">
+        <![CDATA[public DelegateCommand<$parameterType$> $CommandName$AsyncCommand => new(async p => await $CommandName$Async(p));
+            
+        async Task $CommandName$Async($parameterType$ $parameterName$)
+        {
+            $end$
+        }]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Material design</Title>
+            <Shortcut>mat</Shortcut>
+            <Description>Creates material design dictionary</Description>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Imports>
+                <Import>
+                    <Namespace>http://materialdesigninxaml.net/winfx/xaml/themes</Namespace>
+                </Import>
+            </Imports>
+            <Code Language="XAML">            
+                <![CDATA[xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
+                <Application.Resources>
+                    <ResourceDictionary>
+                        <ResourceDictionary.MergedDictionaries>
+                            <materialDesign:BundledTheme BaseTheme="Dark" PrimaryColor="DeepPurple" SecondaryColor="Lime" />
+                            <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                        </ResourceDictionary.MergedDictionaries>
+                    </ResourceDictionary>                        
+                </Application.Resources>]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

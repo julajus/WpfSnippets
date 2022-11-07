@@ -25,16 +25,14 @@
         </Literal>
       </Declarations>
       <Code Language="csharp">
-        <![CDATA[private DelegateCommand $fieldName$;
-        public DelegateCommand $CommandName$ => 
-            $fieldName$ ?? ($fieldName$ = new DelegateCommand(Execute$CommandName$, CanExecute$CommandName$));
+        <![CDATA[public DelegateCommand $CommandName$Command => new($CommandName$, CanExecute$CommandName$));
             
-        void Execute$CommandName$()
+        private void $CommandName$()
         {
             $end$
         }
         
-        bool CanExecute$CommandName$()
+        private bool CanExecute$CommandName$()
         {
             return true;
         }]]>

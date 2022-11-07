@@ -28,9 +28,9 @@
         </Literal>
       </Declarations>
       <Code Language="csharp">
-        <![CDATA[public DelegateCommand $CommandName$AsyncCommand => new (async() => await $CommandName$Async());
+        <![CDATA[public DelegateCommand $CommandName$AsyncCommand => new(async() => await $CommandName$Async());
 
-        async Task $CommandName$Async()
+        private async Task $CommandName$Async()
         {
             $end$
         }]]>
